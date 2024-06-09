@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Formulario de registro</title>	
+		<meta charset="utf-8">
+		<!--Link hace referencia al estilo css-->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+		<!--La etiqueta form nos permite iniciar un formulario
+			Atributo name permite identificar nuestro formulario-->
+			<!--This Hace referencia a un objeto, onsubmit contiene una funcion JS -->
+		<form name="registrousuarios" method = "post" onsubmit="validarformulario(this)" >
+			<table id="enfasis-columna">
+				<!--La etiqueta caption permite ponerle un nombre a nuestro formulario-->
+				<caption>
+					¿Películas Post-Pandemia? Regístrate
+				</caption>
+				<!--La etiqueta tr permite representar las filas-->
+				<tr>
+					<!--La etiquta td permite representar las columnas-->
+					<td class="columna">
+						Nombres:
+					</td>
+					<td>
+						<!--placeholder nos permite poner un mensaje en la cajita de texto-->
+						<input class="default" type="text" name="nombres" placeholder="Datos completos">
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						Apellidos:
+					</td>
+					<td>
+						<input class ="default" type="text" name="apellidos" placeholder="Datos completos">
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						Correo Electrónico:
+					</td>
+					<td>
+						<input class ="default" type="email" name="email" placeholder="Escribir su Email">
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						Número de celular:
+					</td>
+					<td>
+						<input class ="default" type="number" name="telefono" placeholder="Escribir su número">
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						Género:
+					</td>
+					<td>
+						<input type="radio" name="genero" value="H">Masculino
+						&nbsp;&nbsp;&nbsp;	
+						<input type="radio" name="genero" value="F">Femenino
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						¿Qué película desea ver?
+					</td>
+					<td>
+						<select name="distrito" class="default">
+							<option value="">Seleccionar</option>
+							<option value="1">Riesgo bajo cero</option>
+							<option value="2">Medias hermanas</option>
+							<option value="3">Fast and Furious 9</option>
+							<option value="4">Alerta Roja</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="columna">
+						Comentarios:
+					</td>
+					<td>
+						<textarea name="comentarios" class="default" cols="30" rows="2">
+							
+						</textarea>
+					</td>
+				</tr>
+				<tr style="text-align: center">
+					<td>
+						<input type="submit" value="Enviar" class="default" name="enviar">
+					</td>
+					<td>
+						<input type="reset" value="Limpiar" class="default" name="limpiar">
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+</html>
+
+<script src="js/formulario.js"></script>
